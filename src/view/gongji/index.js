@@ -1,7 +1,15 @@
 import React,{Component} from "react";
-
-export default class  Gongji extends Component{
+import AnimatedWrapper from "../AnimatedWrapper";
+class  GongjiComponent extends Component{
     render(){
-        return"功绩"
+        return(
+            <div>
+
+
+            </div>
+
+        )
     }
 }
+const Gongji = AnimatedWrapper(GongjiComponent)
+export default  Gongji

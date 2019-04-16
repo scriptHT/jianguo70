@@ -1,15 +1,16 @@
 import React,{Component} from "react";
+import imgBT from "../view/index/img/bottom.png";
 
 class MainFooter extends Component{
     render(){
-        return(<div style={{
-            height:"64px",
-            width:"100%",
-            backgroundColor:"rgb(200,200,200)"
-            
-        }}
-            className="mainFooter"
-        ></div>)
+        return(<div className="mainFooter">
+            <img style={{
+                position:'absolute',
+                right:"0",
+                width:"100%",
+                height:"100%",
+            }}src={imgBT}></img>
+        </div>)
     }
 }
 export default MainFooter;

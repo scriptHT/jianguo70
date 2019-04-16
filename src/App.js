@@ -4,7 +4,6 @@ import MainFooter from './view/mainFooter';
 import RouterIndex from './router/index'
 import "./view/index.css";
 
-
 class App extends Component {
   render() {
     return (
