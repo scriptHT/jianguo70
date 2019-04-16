@@ -12,7 +12,7 @@ class MainHeader extends Component {
                 <Row >
                     <Col md={6} xs={24} >
                         {/* <h1 id='logo'> */}
-                        <img id="logoImg" src={imgLogo}/>
+                        <img id="logoImg" alt="" src={imgLogo}/>
                         {/* Mad Lion</h1> */}
                     </Col>
                     <Col md={18} xs={0}>

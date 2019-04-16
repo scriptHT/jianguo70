@@ -32,7 +32,7 @@ import AnimatedWrapper from "../AnimatedWrapper";
             {/* <h1>盛世华诞</h1>
             <h1>峥嵘岁月</h1> */}
             
-            <img style={{
+            <img alt="" style={{
                 float:"right",
                 position:'absolute',
                 right:"20px",
@@ -42,14 +42,14 @@ import AnimatedWrapper from "../AnimatedWrapper";
             }}src={ZGM}></img>
 
             <Carousel className="Carousel"  autoplay  >
-                   <div><img src={img1}></img></div>
-                   <div><img src={img2}></img></div>
-                   <div><img src={img5}></img></div>
-                   <div><img src={img6}></img></div>
+                   <div><img alt="" src={img1}></img></div>
+                   <div><img alt="" src={img2}></img></div>
+                   <div><img alt="" src={img5}></img></div>
+                   <div><img alt="" src={img6}></img></div>
                </Carousel>
             <div >
                 
-                    {/* <img  style={{
+                    {/* <img alt=""  style={{
                     width:"100%",
                     opacity:"0.7",
                     float:"left",
@@ -58,7 +58,7 @@ import AnimatedWrapper from "../AnimatedWrapper";
                     }}src={imgBigBG}></img> */}
                     
                     <Card title="盛世华诞，峥嵘岁月" bordered={false} hoverable='true'
-                        cover={<img  style={{
+                        cover={<img alt=""  style={{
                             width:"100%",
                             opacity:"0.7",
                             float:"left",
