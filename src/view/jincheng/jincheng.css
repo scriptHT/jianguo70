@@ -6,13 +6,14 @@ body{
 }
 #perspective{
 	perspective:1800px;/*景深*/
+	position: relative;
+	top:100px;
 }
 #mainWrap{
     position: absolute;
     top: 0px;
     width: 100%;
     height: 100vh;
-    background-image: url(../index/img/bg1.png);
 }
 #wrap{
 	position: relative;
@@ -23,6 +24,7 @@ body{
 	transform:rotateX(-20deg) rotateY(0deg);
 }
 #wrap img{
+	display: inline;
 	width: 210px;
 	height:240px;
 	border: none;
@@ -33,4 +35,11 @@ body{
 	/*倒影*/
 	-webkit-box-reflect: below 0 -webkit-linear-gradient(top,rgba(250,250,250,0),rgba(250,250,250,.0) 30%,rgba(250,250,250,0.3));
 	box-reflect: below 0 -webkit-linear-gradient(top,rgba(250,250,250,0),rgba(250,250,250,.0) 30%,rgba(250,250,250,0.3));
+}
+#graph1{
+	position: relative;
+	margin: 200px auto;
+	height: 500px;
+	width: 650px;
+	border: 4px solid #4F4F4F;
 }

@@ -3,13 +3,11 @@ import imgBT from "../view/index/img/bottom.png";
 
 class MainFooter extends Component{
     render(){
-        return(<div className="mainFooter">
-            <img style={{
-                position:'absolute',
-                right:"0",
-                width:"100%",
-                height:"100%",
-            }}src={imgBT}></img>
+        return(
+        <div className="mainFooter"
+            style={{height:"100px",width:"100%"}}
+        >
+            
         </div>)
     }
 }
