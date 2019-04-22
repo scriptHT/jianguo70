@@ -1,8 +1,7 @@
 import React ,{Component} from  "react";
-import {Switch,Route,Redirect} from "react-router-dom";
+import {Switch,Route} from "react-router-dom";
 import Index from "../view/index/index";
 import Jincheng from "../view/jincheng/index";
-import Gongji from "../view/gongji/index";
 import TransitionGroup from "react-transition-group/TransitionGroup";
 
 
@@ -29,11 +28,11 @@ class RouterIndex extends Component{
                         {match && <Jincheng {...rest} />}
                     </TransitionGroup>
                 )} />
-                <Route path="/gongji" children={({ match, ...rest }) => (
+                {/* <Route path="/gongji" children={({ match, ...rest }) => (
                     <TransitionGroup component={firstChild}>
                         {match && <Gongji {...rest} />}
                     </TransitionGroup>
-                )} />
+                )} /> */}
             </Switch>
         )
     }
