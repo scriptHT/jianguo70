@@ -1,76 +1,39 @@
 import React,{Component} from "react";
-import img1 from './img/slider1.jpg';
-import img2 from "./img/slider2.jpg";
-import img5 from "./img/slider5.jpg";
-import img6 from "./img/slider6.jpg";
-import ZGM from "./img/ZGM.png";
-import imgBigBG from "./img/bigBG.png"
-import { Carousel ,Card} from 'antd';
+import "../index.css";
+import "antd/lib/date-picker/style/css";
+import title1 from './img/title1.png'
+import {BackTop,} from 'antd';
 import AnimatedWrapper from "../AnimatedWrapper";
+import Pwoer from './pwoer'
+import Zhengrong from './zhengrong'
+import Remember from './Remember'
+import Jincheng from '../jincheng/index';
+import scrollHandler from './scrollHandler'
+// import { element } from "prop-types";
 
  class  IndexComponent extends Component{
-    
+     componentDidMount(){
+        window.addEventListener('scroll',scrollHandler);
+        this.reAnimate()
+     }
+     reAnimate =() =>{
+        let mainTitle = document.getElementById('mainTitle');
+        mainTitle.style.left="25%";
+     }
     render(){
-        return(<div className="mainWrap">
-            {/* <Card >
-                <video
-                    className="bgvid"
-                    width="107%"
-                    height="100%"
-                    preload="true"
-                    autoPlay
-                    loop      
-                    muted="true"              
-                >
-                <source 
-                    src="https://ygiyliul35425.oss-cn-hangzhou.aliyuncs.com/jianguo70/bgvid.mp4?OSSAccessKeyId=LTAIoNvWrHQquMM5&Expires=36201555298956&Signature=38FGaw%2BCMTwBVA2G2ecg6uwSLu8%3D"
-                    type="video/mp4"
-                />
-                </video>
-            </Card> */}
-            
-            {/* <h1>盛世华诞</h1>
-            <h1>峥嵘岁月</h1> */}
-            
-            <img alt="" style={{
-                float:"right",
-                position:'absolute',
-                right:"20px",
-                top:'10%',
-                width:"13%",
-                zIndex:"99"
-            }}src={ZGM}></img>
-
-            <Carousel className="Carousel"  autoplay  >
-                   <div><img alt="" src={img1}></img></div>
-                   <div><img alt="" src={img2}></img></div>
-                   <div><img alt="" src={img5}></img></div>
-                   <div><img alt="" src={img6}></img></div>
-               </Carousel>
-            <div >
-                
-                    {/* <img alt=""  style={{
-                    width:"100%",
-                    opacity:"0.7",
-                    float:"left",
-                    filter: "blur(3px)",
-                    zIndex:"-99"
-                    }}src={imgBigBG}></img> */}
-                    
-                    <Card title="盛世华诞，峥嵘岁月" bordered={false} hoverable='true'
-                        cover={<img alt=""  style={{
-                            width:"100%",
-                            opacity:"0.7",
-                            float:"left",
-                            filter: "blur(3px)",
-                            zIndex:"-99"
-                            }}src={imgBigBG}></img>}
-                        style={{opacity:"0.8", position:"relative", width: "100%",textAlign:"center", }}>
-                        <p>Card content</p>
-                        <p>Card content</p>
-                        <p>Card content</p>
-                    </Card>
-            </div>
+        return(
+        <div className="mainWrap">
+                <div id="artical1" className="artical index" style={{width:"100%"}}>
+                    <img src={title1} alt="" id="mainTitle"></img>
+                </div>
+                <Zhengrong/>
+                <div className="artical jincheng" style={{width:"100%"}}>
+                    <h1 id="jcTitle">建 国 进 程</h1>
+                    <Jincheng></Jincheng>
+                </div>
+                <Pwoer/>
+                <Remember/>
+                <BackTop />
         </div>)
     }
 }

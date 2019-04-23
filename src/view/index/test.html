@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <h2 id="flyin" style="position:relative;left:-400;font-style:italic">
+                <font face="Arial">陈泽锋教你如何让文字从左边飞入</font>
+                </h2>
+    <script>
+            if (document.getElementById||document.all)
+var crossheader=document.getElementById? document.getElementById("flyin").style : document.all.flyin.style
+function animatein(){
+if (parseInt(crossheader.left)<0)
+crossheader.left=parseInt(crossheader.left)+20
+else{
+crossheader.left=0
+crossheader.fontStyle="normal"
+clearInterval(start)
+}
+}
+if (document.getElementById||document.all)
+start=setInterval("animatein()",50)
+        </script>
+
+</body>
+</html>

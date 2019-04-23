@@ -12,19 +12,12 @@ import img6 from "./img/6.jpg";
 import img7 from "./img/7.jpg";
 import img8 from "./img/8.jpg";
 import img9 from "./img/9.jpg";
+import imgbg from "./img/111.jpg";
+import data from "./data";
+
+import {Row,Col} from "antd";
 var ppp=['asdfsa','dsajhfgiohdsagoi','s1234567'];
 class  JinchengComponent extends Component{
-    constructor(props){
-        super(props);
-        this.state={
-            id:'',
-            imgSrc:'',
-            name:'trans_fade_image_click',
-            pshow:'none',
-            content:''
-        }
-        const Imgsrc=['./img/1.jpg']
-    }
     rotate3D = () => {
         let wrap = document.getElementById("wrap")
         var oImg = wrap.getElementsByTagName("img");
@@ -32,105 +25,31 @@ class  JinchengComponent extends Component{
         var length = imgArr.length;//获取图片个数
         var deg = 360/length;
         imgArr.map((item,index)=>{
+            // console.log(item.style.transform)
             item.style.transform = "rotateY("+deg*index+"deg) translateZ(350px)";
             item.style.transition = " 2s " + (length-1-index)*0.2 + "s";//设置过度动画
-            
+            return 0
         })
-        var newX,newY,lastX,lastY,minusX,minusY,rotX = -20 ,rotY = 0;
-    
-
-
+        var rotX = -20 ,rotY = 0;
         setInterval(()=> {
             rotY+=0.15;
             wrap.style.transform = "rotateX("+rotX+"deg) rotateY("+rotY+"deg)";
         },10)
-      
+        let graph1=document.getElementById('graph1');
+        graph1.style.backgroundImage='url("'+this.state.imgSrc+'")';
+
     }
-//    imgCS=(e)=>{
 
-//         $('#wrap').find('img').on('click',function(){
-//             alert(4);
-//             $(this).stop();
-//             $('#coolShow b').remove();
-//             /*     生成图片的载体    */
-//             for (var i = 0;i<($("#coolShow").height()/10);i++) $('#coolShow').append('<b></b>');
-//             console.log($("#coolShow").height());
-//             /*     图片显示特效    */
-//             var psn = 0;
-//             var imgId = $(this).children().data('img');
-//             $('#coolShow b').each(function(){
-//                 $(this).css({
-//                     opacity:0,
-//                     backgroundPosition:"0 "+psn+"px",
-//                     backgroundImage:'url("'+options.id+'")'
-//                 });
-//                 psn -= 10;
-//             });
-//             var time = 0;
-//             $('#coolShow b').each(function(){
-//                 $(this).delay(time).animate({opacity:"1"},500);
-//                 time += 40;
-//             });
-//         });
-   
-//    }
-
-
-
-  fadeIn =(props)=>{
-    $.fn.coolShow = function(options){
-        // alert(1);
-		// /*     初始化参数     */
-		// var defaults = {
-		// 	imgSrc:'',
-		// 	speed:50
-        // };
-	
-		 var inita=	function(){
-                alert(2);
-				$('#wrap').find('img').on('click',function(){
-                    alert(4);
-					$(this).stop();
-					$('#coolShow b').remove();
-					/*     生成图片的载体    */
-                    for (var i = 0;i<($("#coolShow").height()/10);i++) $('#coolShow').append('<b></b>');
-                    console.log($("#coolShow").height());
-					/*     图片显示特效    */
-					var psn = 0;
-					var imgId = $(this).children().data('img');
-					$('#coolShow b').each(function(){
-						$(this).css({
-							opacity:0,
-							backgroundPosition:"0 "+psn+"px",
-                            backgroundImage:'url("'+options.id+'")'
-						});
-						psn -= 10;
-					});
-					var time = 0;
-					$('#coolShow b').each(function(){
-						$(this).delay(time).animate({opacity:"1"},500);
-						time += 40;
-					});
-				});
-			}
-        
-
-		/*     代码开始     */
-		return this.each(function(){
-            alert(3);
-			/*     接收传参     */
-		
-			/*     生成按钮的载体    */
-         
-			/*     特效开始    */
-            inita();
-		});
-    };
-  }
-
-	
-
+    constructor(props){
+        super(props);
+        this.state={
+            id:"",
+            imgSrc:imgbg
+        }
+    }
     imgShow=(e)=>{  
+        let graph1=document.getElementById('graph1');
+        graph1.style.backgroundImage='url("'+this.state.imgSrc+'")';
         this.setState({
             id:e.target.id,
             imgSrc:e.target.src,
@@ -139,14 +58,12 @@ class  JinchengComponent extends Component{
             content:ppp[this.state.id]
         }) 
         let ImgSrcs=  e.target.src;
-    
             $('#coolShow b').remove();
             /*     生成图片的载体    */
             for (var i = 0;i<($("#coolShow").height()/10);i++) $('#coolShow').append('<b></b>');
-            console.log($("#coolShow").height());
             /*     图片显示特效    */
             var psn = 0;
-            var imgId = $(this).children().data('img');
+            // var imgId = $(this).children().data('img');
             $('#coolShow b').each(function(){
                 $(this).css({
                     opacity:0,
@@ -159,50 +76,48 @@ class  JinchengComponent extends Component{
             $('#coolShow b').each(function(){
                 $(this).delay(time).animate({opacity:"1"},500);
                 time += 40;
-            });
-       
-        // $('#coolShow').coolShow({
-        //     speed: 40,
-        //     id:this.state.imgSrc
-        // });   
-        // alert(6); 
-       
-}
+            });  
 
+}
     componentDidMount(){
-        this.rotate3D();
-        this.fadeIn();
-        $('#coolShow').coolShow({
-            speed: 40,
-            id:this.state.imgSrc
-        });   
+        window.Jincheng = this
+        // this.rotate3D();
+
     }
     render(){
         return(
             <div id="mainWrap">
-                <div id="perspective"    onClick={(e)=>this.imgShow(e)} >
-                    <div id="wrap" >
-                        <img id="0" alt="" src={img2}></img>
-                        <img id="1" alt="" src={img3}></img>
-                        <img id="2" alt="" src={img4}></img>
-                        <img id="3" alt="" src={img5}></img>
-                        <img id="4" alt="" src={img6}></img>
-                        <img id="5" alt="" src={img7}></img>
-                        <img id="6" alt="" src={img8}></img>
-                        <img id="7" alt="" src={img9}></img>
-                    </div>
-                </div>
-                <div id="wrap1" >
-                <p style={{display:this.state.pshow}} id="showp">{this.state.content}</p>
-                {/* <img id="show" alt="" className={this.state.name} src={this.state.imgSrc}></img> */}
-                <div className="main">
-                <div id="coolShow"></div>
-                <div id="handBar">   
- </div>
-   
-    </div>
 
+            <Row>
+                <Col  xl={12} md={24} xs={24}>
+                    <div id="perspective" onClick={(e)=>this.imgShow(e)}>
+                        <div id="wrap" >
+                        <img id="0" alt="" src={img1}></img>
+                        <img id="1" alt="" src={img2}></img>
+                        <img id="2" alt="" src={img3}></img>
+                        <img id="3" alt="" src={img4}></img>
+                        <img id="4" alt="" src={img5}></img>
+                        <img id="5" alt="" src={img6}></img>
+                        <img id="6" alt="" src={img7}></img>
+                        <img id="7" alt="" src={img8}></img>
+                        <img id="8" alt="" src={img9}></img>
+                        </div>
                     </div>
+                </Col>
+
+                <Col xl={12} md={0} xs={0}>
+                    <div id="graph1">
+                        <div className="main">
+                            <div id="coolShow"></div>
+                        </div>
+                    </div>
+                </Col>
+
+                <Col xl={0} md={0} xs={24}>
+                    <div id="graph2" style={{height:"300px",width:"90%"}}></div>
+                </Col>
+            </Row>
+
             </div>
         )
     }

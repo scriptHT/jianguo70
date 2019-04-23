@@ -6,6 +6,14 @@ import imgLogo from './index/img/logo.png';
 import "antd/lib/date-picker/style/css";
 
 class MainHeader extends Component {
+    scrollToAnchor = (name) => {
+    if (name) {
+        let anchorElement = document.getElementsByClassName(name)[0];
+        let anchorElement2 = document.getElementById(name);
+        if(anchorElement) { anchorElement.scrollIntoView({block: 'start', behavior: 'smooth'}); }
+        if(anchorElement2) { anchorElement2.scrollIntoView({block: 'start', behavior: 'smooth'}); }
+    }
+  }
     render(){
         return(<div className="mainHeader">
             <Layout.Header id="header">
@@ -22,9 +30,11 @@ class MainHeader extends Component {
                         <Dropdown overlay={
                             // <Nav mode="vertical" id="nav"/> 
                             <Menu mode="vertical" id='nav'>
-                                <Menu.Item key ="index"><Link to="/index"><Icon type="home" />欢庆70</Link></Menu.Item>
-                                <Menu.Item key ="jincheng"><Link to="/jincheng"><Icon type="file-protect" />建国进程</Link></Menu.Item>
-                                <Menu.Item key ="gongji"><Link to="/gongji"><Icon type="dollar" />建国功绩</Link></Menu.Item>
+                                <Menu.Item onClick={this.scrollToAnchor.bind(this,"artical1")} key ="index"><Link to="/index"><Icon type="home" />欢庆70</Link></Menu.Item>
+                                <Menu.Item onClick={this.scrollToAnchor.bind(this,"zhengrong")} key ="zhengrong"><Icon type="rise" />峥嵘岁月</Menu.Item>
+                                <Menu.Item onClick={this.scrollToAnchor.bind(this,"jincheng")} key ="jincheng"><Icon type="menu-unfold" />建国进程</Menu.Item>
+                                <Menu.Item onClick={this.scrollToAnchor.bind(this,"artical4")} key ="pwoer"><Icon type="poweroff" />中国力量</Menu.Item>
+                                <Menu.Item onClick={this.scrollToAnchor.bind(this,"artical5")} key ="remember"><Icon type="star" />70纪念</Menu.Item>
                             </Menu>
                         }   
                             trigger = {["click","touched"]}
