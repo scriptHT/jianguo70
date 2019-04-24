@@ -22,7 +22,7 @@ class PowerCard2 extends Component{
                 onMouseOut={this.avatarBack2} 
                 onMouseOver={this.avatarAnim2.bind(this,index)} 
                 style={{ backgroundColor:"rgba(255,255,255,0.4)", 
-                margin:"auto",marginTop:"2%" }} 
+                margin:"auto",marginTop:"3%"}} 
                 hoverable="true">
                 <Meta
                     avatar={<Avatar src={item.path} />}
