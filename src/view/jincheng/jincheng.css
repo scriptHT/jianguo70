@@ -5,6 +5,7 @@ body{
 	background:black;
 }
 
+
 @media all and (min-width:767px){
 	#perspective{
 		top:0px;
@@ -38,6 +39,7 @@ body{
 	/*倒影*/
 	-webkit-box-reflect: below 0 -webkit-linear-gradient(top,rgba(250,250,250,0),rgba(250,250,250,.0) 30%,rgba(250,250,250,0.3));
 	box-reflect: below 0 -webkit-linear-gradient(top,rgba(250,250,250,0),rgba(250,250,250,.0) 30%,rgba(250,250,250,0.3));
+
 }
 @media all and (max-width:1600px){
     #wrap img{
@@ -65,7 +67,7 @@ body{
 	position: relative;
 	margin: 1% auto;
 	height: 500px;
-	width: 80%;
+	width: 600px;
 	border: 4px solid #4F4F4F;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -100,6 +102,4 @@ body{
 	font-size: 30px;
 	color: red;
 	z-index: 2;
-
-	
 }

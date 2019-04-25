@@ -12,10 +12,12 @@ import img6 from "./img/6.jpg";
 import img7 from "./img/7.jpg";
 import img8 from "./img/8.jpg";
 import img9 from "./img/9.jpg";
+import imgbg from "./img/111.jpg";
+import data from "./data";
+
 import {Row,Col} from "antd";
 var ppp=['asdfsa','dsajhfgiohdsagoi','s1234567'];
 class  JinchengComponent extends Component{
-    
     rotate3D = () => {
         let wrap = document.getElementById("wrap")
         var oImg = wrap.getElementsByTagName("img");
@@ -33,14 +35,21 @@ class  JinchengComponent extends Component{
             rotY+=0.15;
             wrap.style.transform = "rotateX("+rotX+"deg) rotateY("+rotY+"deg)";
         },10)
+        let graph1=document.getElementById('graph1');
+        graph1.style.backgroundImage='url("'+this.state.imgSrc+'")';
+
     }
+
     constructor(props){
         super(props);
         this.state={
             id:"",
+            imgSrc:imgbg
         }
     }
     imgShow=(e)=>{  
+        let graph1=document.getElementById('graph1');
+        graph1.style.backgroundImage='url("'+this.state.imgSrc+'")';
         this.setState({
             id:e.target.id,
             imgSrc:e.target.src,
@@ -49,11 +58,9 @@ class  JinchengComponent extends Component{
             content:ppp[this.state.id]
         }) 
         let ImgSrcs=  e.target.src;
-    
             $('#coolShow b').remove();
             /*     生成图片的载体    */
             for (var i = 0;i<($("#coolShow").height()/10);i++) $('#coolShow').append('<b></b>');
-            console.log($("#coolShow").height());
             /*     图片显示特效    */
             var psn = 0;
             // var imgId = $(this).children().data('img');
@@ -70,38 +77,30 @@ class  JinchengComponent extends Component{
                 $(this).delay(time).animate({opacity:"1"},500);
                 time += 40;
             });  
+
 }
     componentDidMount(){
         window.Jincheng = this
         // this.rotate3D();
+
     }
-    // componentWillUnmount()
-    getIndex = id => {
-        let graph1=document.getElementById('graph1');
-        graph1.style.backgroundImage="url(./img/1.jpg)";
-        console.log(graph1.style.backgroundImage)
-        this.setState({
-            id:id
-        })
-        console.log(id)
-    };
     render(){
         return(
             <div id="mainWrap">
+
             <Row>
                 <Col  xl={12} md={24} xs={24}>
-                    <div id="perspective"  onClick={(e)=>this.imgShow(e)}>
+                    <div id="perspective" onClick={(e)=>this.imgShow(e)}>
                         <div id="wrap" >
-                        <img id="8" alt="" src={img1}></img>
-                        <img id="0" alt="" src={img2}></img>
-                        <img id="1" alt="" src={img3}></img>
-                        <img id="2" alt="" src={img4}></img>
-                        <img id="3" alt="" src={img5}></img>
-                        <img id="4" alt="" src={img6}></img>
-                        <img id="5" alt="" src={img7}></img>
-                        <img id="6" alt="" src={img8}></img>
-                        <img id="7" alt="" src={img9}></img>
-                    
+                        <img id="0" alt="" src={img1}></img>
+                        <img id="1" alt="" src={img2}></img>
+                        <img id="2" alt="" src={img3}></img>
+                        <img id="3" alt="" src={img4}></img>
+                        <img id="4" alt="" src={img5}></img>
+                        <img id="5" alt="" src={img6}></img>
+                        <img id="6" alt="" src={img7}></img>
+                        <img id="7" alt="" src={img8}></img>
+                        <img id="8" alt="" src={img9}></img>
                         </div>
                     </div>
                 </Col>
@@ -118,9 +117,11 @@ class  JinchengComponent extends Component{
                     <div id="graph2" style={{height:"300px",width:"90%"}}></div>
                 </Col>
             </Row>
+
             </div>
         )
     }
 }
+
 const Jincheng = AnimatedWrapper(JinchengComponent);
 export default  Jincheng;
