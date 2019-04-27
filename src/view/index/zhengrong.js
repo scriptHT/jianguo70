@@ -52,7 +52,7 @@ class Zhengrong extends Component {
                     <div onClick={()=>this.txtShow(2)}  className="butcommon2" > <Button>图3</Button></div>
                     <div onClick={()=>this.txtShow(3)} className="butcommon3" > <Button>图4</Button></div>
                     </div> */}
-                        <Carousel className="carousel2"  >
+                        <Carousel className="carousel2" autoplay >
                             <div><h3>{data.zhengrong[0].txt}</h3></div>
                             <div><h3>{data.zhengrong[1].txt}</h3></div>
                             <div><h3>{data.zhengrong[2].txt}</h3></div>
@@ -62,8 +62,11 @@ class Zhengrong extends Component {
                 </Col>
                 <Col md={0} xs={24} >
                     <Card className="card1" title="盛世华诞，峥嵘岁月" bordered={false} hoverable='true'
-                        style={{ position:"relative",textAlign:"center", }}>
-                        <p>{data.zhengrong[1].txt}{data.zhengrong[2].txt}</p>
+                        style={{ position:"relative",fontSize:"13px",textAlign:"center", }}>
+                        <p>{data.zhengrong[0].txt}</p>
+                        <p>{data.zhengrong[1].txt}</p>
+                        <p>{data.zhengrong[2].txt}</p>
+                        <p>{data.zhengrong[3].txt}</p>
                     </Card>
                 </Col>
             </Row>

@@ -8,7 +8,7 @@ class Remember extends Component {
     const Panel = Collapse.Panel;
     return (
         <div id="artical5" className="artical remember" style={{height:"800px" ,width:"100%"}}>
-            <h1 id="reTitle">周年纪念</h1>
+            <h1 id="reTitle">盛世华诞</h1>
             <Row>
                 <Col md={24} xs={24}>
                 <Collapse className="remCollapse" accordion defaultActiveKey={['1']}>
@@ -22,7 +22,7 @@ class Remember extends Component {
                     <Panel header={data.remember[1].title} key="2">
                         <Card className="card3" bordered={false} hoverable='true'
                             style={{textAlign:"center", }}>
-                            <img src={data.remember[1].path} style={{height:"200px" ,width:"300px"}} alt="纪念币"></img>
+                            <img src={data.remember[1].path} style={{height:"200px" ,width:"150px"}} alt="纪念币"></img>
                             <p>{data.remember[1].txt}</p>
                         </Card>
                     </Panel>

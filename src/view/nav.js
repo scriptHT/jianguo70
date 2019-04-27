@@ -20,7 +20,7 @@ class Nav extends Component{
                 <Menu.Item onClick={this.scrollToAnchor.bind(this,"zhengrong")} key ="zhengrong"><Icon type="rise" />峥嵘岁月</Menu.Item>
                 <Menu.Item onClick={this.scrollToAnchor.bind(this,"jincheng")} key ="jincheng"><Icon type="menu-unfold" />建国进程</Menu.Item>
                 <Menu.Item onClick={this.scrollToAnchor.bind(this,"artical4")} key ="pwoer"><Icon type="poweroff" />中国力量</Menu.Item>
-                <Menu.Item onClick={this.scrollToAnchor.bind(this,"artical5")} key ="remember"><Icon type="star" />周年纪念</Menu.Item>
+                <Menu.Item onClick={this.scrollToAnchor.bind(this,"artical5")} key ="remember"><Icon type="star" />盛世华诞</Menu.Item>
             </Menu>
         </div>)
     }

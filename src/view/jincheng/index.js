@@ -78,7 +78,16 @@ class  JinchengComponent extends Component{
                 time += 40;
             });  
 
-}
+    }
+    // showTxt=(e)=>{
+    //     let scrollWidth = document.body.clientWidth;
+    //     console.log(data[e.target.id])
+    //     if(scrollWidth>800){
+    //         return
+    //     }else{
+    //         console.log(data[e.target.id])
+    //     }
+    // }
     componentDidMount(){
         window.Jincheng = this
         // this.rotate3D();
@@ -90,7 +99,7 @@ class  JinchengComponent extends Component{
 
             <Row>
                 <Col  xl={12} md={24} xs={24}>
-                    <div id="perspective" onClick={(e)=>this.imgShow(e)}>
+                    <div id="perspective"  onClick={(e)=>this.imgShow(e)}>
                         <div id="wrap" >
                         <img id="0" alt="" src={img1}></img>
                         <img id="1" alt="" src={img2}></img>
@@ -114,7 +123,9 @@ class  JinchengComponent extends Component{
                 </Col>
 
                 <Col xl={0} md={0} xs={24}>
-                    <div id="graph2" style={{height:"300px",width:"90%"}}></div>
+                    <div id="graph2" style={{height:"300px",width:"90%"}}>
+                        <p>{data[0]}</p>
+                    </div>
                 </Col>
             </Row>
 

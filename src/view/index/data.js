@@ -20,15 +20,15 @@ const data = {
 
         ],
         "remember":[
-            {"title":"纪念币","path":"https://ygiyliul35425.oss-cn-hangzhou.aliyuncs.com/jianguo70/remember1.jpg?OSSAccessKeyId=LTAIoNvWrHQquMM5&Expires=36001556102611&Signature=8k4A%2Fg15kUF%2FUTYm6IM8WOkz7sE%3D",
-            "txt":"纪念币的主要功能是通过货币投放的方式纪念各种重大的历史、政治、文化、人物、珍惜动物等。重要的是主题和纪念的意义。"},
-            {"title":"纪念邮票","path":"https://ygiyliul35425.oss-cn-hangzhou.aliyuncs.com/jianguo70/remember2.jpg?OSSAccessKeyId=LTAIoNvWrHQquMM5&Expires=37556102794&Signature=RdhIXohMqmbCQQeW8pOMD5MgGEo%3D",
-            "txt":"2018年12月，经国家邮政局审定，中国邮政2019年纪特邮票发行计划30套，其中包括中华人民共和国成立七十周年、澳门回归祖国二十周年、中国2019世界集邮展览、2019年北京世界园艺博览会、“五四”运动一百周年等16套纪念邮票，和乙亥年、拜年、马拉松、五岳图等14套特种邮票。"},
             {"title":"国庆节","path":"https://ygiyliul35425.oss-cn-hangzhou.aliyuncs.com/jianguo70/remember3.jpg?OSSAccessKeyId=LTAIoNvWrHQquMM5&Expires=37556102984&Signature=H52OWo0F9tIsgp1c7Ji1bHLfyDk%3D",
             "txt":"国庆的来历源于第一次政协会议上，许广平发言说：“马叙伦委员请假不能来，他托我来说，中华人民共和国的成立，应有国庆日，所以希望本会决定把10月1日定为国庆日。”毛泽东说“我们应作一提议，向政府建议，由政府决定。”于是1949年10月2日，中央人民政府通过《关于中华人民共和国国庆日的决议》，规定每年10月1日为国庆日，并以这一天作为宣告中华人民共和国成立的日子。并且一直到今天。"},
+            {"title":"中国梦","path":"https://ygiyliul35425.oss-cn-hangzhou.aliyuncs.com/jianguo70/ZGM.png?OSSAccessKeyId=LTAIoNvWrHQquMM5&Expires=1556269519&Signature=kJeT3fCfDGMl%2BVn7%2FayPp6gPGHg%3D",
+            "txt":"中国共产党自成立以来便致力于为广大人民谋福祉。中国梦是个体梦与群体梦的辩证统一，国家富强与民族振兴最终落脚点都是人民的幸福。只有人民过上了幸福的生活，民族才会振兴，国家才能真正强大。"},
+            {"title":"居安思危","path":"https://ygiyliul35425.oss-cn-hangzhou.aliyuncs.com/jianguo70/remember2.jpg?OSSAccessKeyId=LTAIoNvWrHQquMM5&Expires=37556102794&Signature=RdhIXohMqmbCQQeW8pOMD5MgGEo%3D",
+            "txt":"现代化的中国，虽然还不是发达国家但我们在经济，军事，科技等方面居世界前列。作为中国当代大学生的我们在为祖国骄傲是更要有种居安思危的思想，勿忘国耻。少年智则国智，少年富则国富，少年强则中国强"},
             {"title":"","path":"",
             "txt":""},
-
+    
         ],
         
 }
